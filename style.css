@@ -1,0 +1,194 @@
+/* Center the container in the middle of the window */
+body,
+html {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+/* Container settings */
+.container {
+    display: flex;
+    width: 1200px;
+    height: 1200px;
+    /*border: 1px solid #F8F7F3;*/
+
+}
+
+.invitation {
+    background: linear-gradient(90deg, #F8F7F3 0%, #5B2B6A 35%, #D545A5 100%);
+}
+
+/* Each section in the container */
+.section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    /*border: 1px solid #ccc;*/
+}
+
+/* First section rows */
+.section:first-child {
+    justify-content: space-evenly;
+}
+
+/* Second section using CSS grid to allow row spanning */
+.section:last-child {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    /* 4 rows */
+    grid-gap: 5px;
+}
+
+/* Row styling */
+.row {
+    /*border: 1px solid #000;*/
+
+}
+
+/* Make the 3rd row span two rows */
+.row.span-2 {
+    grid-row: span 2;
+}
+
+.icon-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.row-icon-content {
+    position: relative;
+    margin-left: 60px;
+}
+
+.cakeicon {
+    height: 6%;
+    width: 6%;
+    padding: 20px;
+}
+
+.row-2 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 300;
+    unicode-bidi: isolate;
+
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 300;
+    unicode-bidi: isolate;
+}
+
+.row-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+
+.image-container {
+    position: relative;
+    left: 170px;
+    width: 50%;
+    height: 25%;
+    border-radius: 50%;
+    background-image: url('babyimage.jpg');
+    background-size: 350px 300px;
+    background-repeat: no-repeat;
+}
+
+.container-round {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    margin-bottom: 0px;
+}
+
+.rounded-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background-image: url('babyimage.jpg');
+    background-size: 350px 300px;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: 2px solid #D545A5;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+path {
+    fill: transparent;
+}
+
+text {
+    fill: #fff;
+    font-size: 2rem;
+    font-family: Arial, sans-serif;
+}
+
+.container-name {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    flex-wrap: wrap;
+    color: #fff;
+}
+
+.container-address h4 {
+    color: #D545A5;
+    margin: 10px;
+}
+
+.container-name h2 {
+    background-image: url('gold-metal.png');
+    background-repeat: no-repeat;
+    padding: 0px 38px;
+    margin-left: -26px;
+}
+
+.row-11 {
+    position: relative;
+
+}
+
+
+@media only screen and (max-width: 550px) {
+    .container {
+        grid-template-columns: 1fr;
+
+
+    }
+}
